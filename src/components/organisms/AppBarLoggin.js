@@ -36,7 +36,7 @@ import {
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import logo from '../../assets/logo.svg';
-import { fetchUserInfo, logout } from '../../utils/auth';
+import { fetchUserInfo, logout, getUserIdFromToken } from '../../utils/auth';
 
 const pages = [
   { name: 'Inicio', path: '/', icon: <Home fontSize="small" /> },
@@ -44,7 +44,7 @@ const pages = [
 ];
 
 const settings = [
-  { name: 'Perfil', path: '/perfil', icon: <AccountCircle fontSize="small" /> },
+  { name: 'Perfil', path: `/perfil/${getUserIdFromToken()}`, icon: <AccountCircle fontSize="small" /> },
   { name: 'Dashboard', path: '/dashboard', icon: <Dashboard fontSize="small" /> },
   { name: 'Configuración', path: '/configuracion', icon: <Settings fontSize="small" /> },
   { name: 'Cerrar Sesión', action: logout, icon: <Logout fontSize="small" /> }
@@ -91,6 +91,15 @@ export default function AuthAppBar() {
     navigate(path);
     handleCloseNavMenu();
     handleCloseUserMenu();
+  };
+
+  const handleNavigateToProfile = () => {
+    const userId = getUserIdFromToken();
+    if (userId) {
+      navigate(`/perfil/${userId}`);
+    } else {
+      console.error('No se pudo obtener el ID del usuario');
+    }
   };
 
   const filteredSettings = settings.filter(setting => {
