@@ -125,7 +125,7 @@ const PasswordResetPage = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:3001/api/request-password-reset', {
+      const response = await axios.post('https://backend.quicktrips.lat/api/request-password-reset', {
         email: email
       });
       
@@ -154,7 +154,7 @@ const PasswordResetPage = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:3001/api/reset-password', {
+      const response = await axios.post('https://backend.quicktrips.lat/api/reset-password', {
         email: email,
         code: code.join(''),
         newPassword: newPassword
@@ -184,7 +184,7 @@ const PasswordResetPage = () => {
     setResendLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:3001/api/resend-reset-code', {
+      const response = await axios.post('https://backend.quicktrips.lat/api/resend-reset-code', {
         email: email
       });
       

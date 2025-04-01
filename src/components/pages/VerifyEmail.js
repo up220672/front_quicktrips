@@ -138,7 +138,7 @@ const EmailVerification = () => {
     setLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:3001/api/verify-email', {
+      const response = await axios.post('https://backend.quicktrips.lat/api/verify-email', {
         email: email,
         code: code.join('')
       }, {
@@ -175,7 +175,7 @@ const EmailVerification = () => {
     setResendLoading(true);
     
     try {
-      const response = await axios.post('http://localhost:3001/api/resend-verification-code', {
+      const response = await axios.post('https://backend.quicktrips.lat/api/resend-verification-code', {
         email: email
       }, {
         headers: {

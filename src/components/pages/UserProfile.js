@@ -63,13 +63,13 @@ const UserProfile = () => {
         const token = Cookies.get('token'); // Obtén el token desde las cookies
 
         // Obtener datos del usuario
-        const userResponse = await axios.get(`http://localhost:3001/api/user/${userId}`, {
+        const userResponse = await axios.get(`https://backend.quicktrips.lat/api/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(userResponse.data);
 
         // Obtener reseñas del usuario
-        const reviewsResponse = await axios.get(`http://localhost:3001/api/review/user/${userId}`, {
+        const reviewsResponse = await axios.get(`https://backend.quicktrips.lat/api/review/user/${userId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserReviews(reviewsResponse.data.reviews || []);
@@ -98,7 +98,7 @@ const UserProfile = () => {
             <CardMedia
               component="img"
               height="200"
-              image={property.images?.[0] ? `http://localhost:3001${property.images[0].url}` : ''}
+              image={property.images?.[0] ? `https://backend.quicktrips.lat${property.images[0].url}` : ''}
               alt={property.title || 'Property image'}
               sx={{ objectFit: 'cover' }}
             />
@@ -267,7 +267,7 @@ const UserProfile = () => {
             }
           >
             <Avatar
-              src={userData.profile_picture ? `http://localhost:3001${userData.profile_picture}` : ''}
+              src={userData.profile_picture ? `https://backend.quicktrips.lat${userData.profile_picture}` : ''}
               sx={{ 
                 width: isMobile ? 120 : 150, 
                 height: isMobile ? 120 : 150,

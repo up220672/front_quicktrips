@@ -36,7 +36,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/api/login", {
+      const response = await axios.post("https://backend.quicktrips.lat/api/login", {
         email,
         password,
       });

@@ -8,7 +8,7 @@ const RulesStep = ({ property, setProperty }) => {
   const [newRule, setNewRule] = useState('');
   const [timeoutId, setTimeoutId] = useState(null);
   const token = Cookies.get('token');
-  const API_BASE_URL = 'http://localhost:3001';
+  const API_BASE_URL = 'https://backend.quicktrips.lat';
   const draftId = localStorage.getItem('property_draft');
 
   // Obtener reglas directamente del draft_data o inicializar array vacío

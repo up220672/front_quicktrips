@@ -63,7 +63,7 @@ const PropertyDetail = () => {
       const token = Cookies.get('token');
 
       try {
-        const response = await axios.get(`http://localhost:3001/api/property/${propertyId}`, {
+        const response = await axios.get(`https://backend.quicktrips.lat/api/property/${propertyId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -125,7 +125,7 @@ const PropertyDetail = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:3001/api/booking',
+        'https://backend.quicktrips.lat/api/booking',
         bookingData,
         {
           headers: {

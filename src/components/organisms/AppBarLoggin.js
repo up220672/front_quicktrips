@@ -61,7 +61,7 @@ function HideOnScroll({ children }) {
 
 const getFullImageUrl = (path) => {
   if (!path) return null;
-  return path.startsWith('http') ? path : `http://localhost:3001${path}`;
+  return path.startsWith('http') ? path : `https://backend.quicktrips.lat${path}`;
 };
 
 export default function AuthAppBar() {

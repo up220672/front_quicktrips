@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie"; // Librería para manejar cookies
 import {jwtDecode} from "jwt-decode"; // Librería para decodificar el token JWT
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = "https://backend.quicktrips.lat/api";
 
 // Verifica si el usuario está autenticado
 export const isAuthenticated = async () => {

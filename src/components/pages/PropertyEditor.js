@@ -34,7 +34,7 @@ import { getUserIdFromToken } from '../../utils/auth';
 
 const PropertyEditor = ({ propertyId, onClose = () => {} }) => {
   const [isNewProperty, setIsNewProperty] = useState(!propertyId);
-  const API_BASE_URL = 'http://localhost:3001';
+  const API_BASE_URL = 'https://backend.quicktrips.lat';
   const theme = useTheme();
   const navigate = useNavigate();
   const [token] = useState(Cookies.get('token'));

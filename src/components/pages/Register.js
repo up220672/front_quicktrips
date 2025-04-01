@@ -76,7 +76,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/api/register", {
+      const response = await axios.post("https://backend.quicktrips.lat/api/register", {
         username,
         email,
         password,

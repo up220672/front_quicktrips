@@ -10,8 +10,8 @@ import axios from 'axios';
 import Cookies from "js-cookie";
 
 const PDFStep = ({ property, setProperty }) => {
-  //const API_BASE = "http://localhost:3001";
-  const API_BASE = "http://localhost:3001";
+  //const API_BASE = "https://backend.quicktrips.lat";
+  const API_BASE = "https://backend.quicktrips.lat";
   const token = Cookies.get('token');
   const draftId = localStorage.getItem('property_draft');
   

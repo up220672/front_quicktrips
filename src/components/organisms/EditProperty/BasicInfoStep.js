@@ -12,7 +12,7 @@ import NotificationAlert from '../../atoms/NotificationAlert';
 const BasicInfoStep = ({ property, setProperty }) => {
   const token = Cookies.get('token');
   const [timeoutId, setTimeoutId] = useState(null);
-  const API_BASE_URL = 'http://localhost:3001';
+  const API_BASE_URL = 'https://backend.quicktrips.lat';
   const draftId = localStorage.getItem('property_draft');
 
   const [notification, setNotification] = useState({

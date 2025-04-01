@@ -28,7 +28,7 @@ import { ExpandMore, ExpandLess, LocationOn } from '@mui/icons-material';
 // Lazy-load del componente LeafletMap
 const LeafletMap = lazy(() => import('../../../utils/MapComponent'));
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = "https://backend.quicktrips.lat/api";
 
 const ProfileSection = ({ onUserUpdate }) => {
   const theme = useTheme();
@@ -91,7 +91,7 @@ const ProfileSection = ({ onUserUpdate }) => {
   // Función para obtener la URL completa de la imagen
   const getFullImageUrl = (path) => {
     if (!path) return null;
-    return path.startsWith('http') ? path : `http://localhost:3001${path}`;
+    return path.startsWith('http') ? path : `https://backend.quicktrips.lat${path}`;
   };
 
   useEffect(() => {

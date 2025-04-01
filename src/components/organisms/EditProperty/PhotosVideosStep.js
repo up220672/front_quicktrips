@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 import DynamicNotification from '../../atoms/NotificationAlert';
 
 const PhotosVideosStep = ({ property, setProperty }) => {
-  const API_BASE = "http://localhost:3001";
+  const API_BASE = "https://backend.quicktrips.lat";
   const token = Cookies.get('token');
   const draftId = localStorage.getItem('property_draft');
   
